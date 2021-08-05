@@ -9,9 +9,14 @@ ip_lst = list(gen_ip(start_ip,end_ip))
 valid_ip_lst = list(check(ip_lst))
 
 if valid_ip_lst != []:
-    with open("saveip.txt", "r+") as f:
-        f.truncate(0)
-        f.close()
+    try:
+        with open("saveip.txt", "r+") as f:
+            f.truncate(0)
+            f.close()
+    except IOError:
+        with open("saveip.txt", "a") as f:
+            f.write("")
+            f.close()
     print("IP List")
     for i in range(1,len(valid_ip_lst)+1):
         fvalid= f"{i} {valid_ip_lst[i-1]}"
