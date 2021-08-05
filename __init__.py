@@ -14,6 +14,4 @@ def check(ip_lst):
         if response == 0:
             yield ip
         else:
-            print(response)            
-
-#check(["142.250.77.142"])
+            print(response)   
