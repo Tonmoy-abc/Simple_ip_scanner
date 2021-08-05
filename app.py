@@ -20,7 +20,7 @@ if valid_ip_lst != []:
             f.close()
         print(fvalid)
 else:
-    print("No valid ip foun".title())
+    print("No valid ip found".title())
 
 end_time = time.time()
 passt = end_time-start_time
